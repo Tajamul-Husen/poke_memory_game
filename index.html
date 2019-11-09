@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Memory Game</title>
+    <link rel="stylesheet" href="dist/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="dist/js/app.js"></script>
+  </head>
+  <body>
+    <div class="main">
+        <h1 class="title"><span class="game-brand">Pokemon</span> Memory Game</h1>
+      <div class="game-status">
+        <div class="step">
+          <h2>Steps: <span class="moves">0</span></h2>
+        </div>
+        <div class="timer">
+          <h2>Time - <span class="time">0:0</span></h2>
+        </div>
+        <div class="restart-icon">
+          <h2><i class="fa fa-repeat"></i></h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="flip-card" data-number="5">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/meowth.png" alt="meowth" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="1">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/bullbasaur.png" alt="bullbasaur" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="4">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/jigglypuff.png" alt="jigglypuff" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="1">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/bullbasaur.png" alt="bullbasaur" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="6">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/psyduck.png" alt="psyduck" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="3">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/eevee.png" alt="eevee" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="5">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/meowth.png" alt="meowth" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="6">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/psyduck.png" alt="psyduck" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="2">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/charmander.png" alt="charmander" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="3">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/eevee.png" alt="eevee" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="2">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/charmander.png" alt="charmander" />
+          </div>
+        </div>
+        <div class="flip-card" data-number="4">
+          <div class="flip-card-front">
+            <img src="dist/img/ball.png" alt="pokemon-ball" />
+          </div>
+          <div class="flip-card-back">
+            <img src="dist/img/jigglypuff.png" alt="jigglypuff" />
+          </div>
+        </div>
+      </div>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Congratulations</h2>
+          <a class="close" href="#">×</a>
+          <div class="content-1">
+            You're a winner
+          </div>
+          <div class="content-2">
+            <p>You made <span id="finalMove"> </span> moves</p>
+            <p>in <span id="totalTime"> </span> </p>
+          </div>
+          <button class="play-again">
+            Play again
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

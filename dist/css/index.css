@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to right, #1488cc, #2b32b2);
+  /* background: linear-gradient(to right, #ff512f, #dd2476);  */
+  padding-bottom: 15px;
+}
+/*game title*/
+.title {
+  width: 500px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  border: 5px solid #fff;
+}
+/* game upper status*/
+.game-status {
+  position: absolute;
+  top: 70px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.game-status > * {
+  width: 136px;
+}
+.moves, .time,.restart-icon,.game-brand{
+  color: #f1c40f;
+}
+
+/*game container*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+/*main card*/
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+.flip-card-back {
+  background-color: #f1c40f;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*open the card*/
+.open {
+  transform: rotateY(0deg);
+}
+/* modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 150px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  min-width: 450px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #2b32b2;
+}
+
+.popup .content-1,
+.content-2 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+.content-1 {
+  margin: 20px 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.content-2 {
+  margin-bottom: 20px;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 100 !important;
+}
+
+.play-again {
+  background-color: #2b32b2;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  color: #fff;
+  border-radius: 5px;
+}
+/* media query for 768px*/
+@media screen and (max-width: 768px) {
+  .main {
+    align-items: center;
+  }
+  .title{
+    width: 400px;
+  }
+  .container {
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+  }
+  .game-status {
+    width: 400px;
+    top: 80px;
+  }
+  .game-status > * {
+    width: 134px;
+  }
+}
