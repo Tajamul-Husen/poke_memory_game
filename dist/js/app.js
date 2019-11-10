@@ -120,6 +120,7 @@ function finishGame() {
     document.getElementById("finalMove").innerHTML = step;
     document.getElementById("totalTime").innerHTML = finalTime;
     closeModal();
+    resetStatus();
   }
 }
 
