@@ -116,8 +116,7 @@ body {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 40%;
-  min-width: 450px;
+  width: 500px;
   position: relative;
   transition: all 0.5s ease-in-out;
 }
@@ -139,7 +138,7 @@ body {
 }
 
 .popup .close:hover {
-  color: #2b32b2;
+  color: #1488cc;
 }
 
 .popup .content-1,
@@ -152,6 +151,7 @@ body {
   margin: 20px 0 10px 0;
   font-size: 1.2rem;
   font-weight: 700;
+  color: #f1c40f;
 }
 .content-2 {
   margin-bottom: 20px;
@@ -163,7 +163,7 @@ body {
 }
 
 .play-again {
-  background-color: #2b32b2;
+  background-color: #1488cc;
   padding: 0.7rem 1rem;
   font-size: 1.1rem;
   display: block;
@@ -177,10 +177,13 @@ body {
   .container {
     width: 400px;
     height: 400px;
-    margin-top: 7.5rem;
+    margin-top: 8.5rem;
   }
   .game-status {
-    top: 70px;
+    top: 80px;
+    width: 400px;
+  }
+  .popup{
     width: 400px;
   }
 }
