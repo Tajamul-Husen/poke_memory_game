@@ -30,21 +30,21 @@ body {
 /* game upper status*/
 .game-status {
   position: absolute;
-  top: 70px;
+  top: 60px;
   width: 500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   color: #fff;
+  padding: 0 5px;
 }
-.game-status > * {
-  width: 136px;
+.restart-icon{
+  width: 75px;
 }
 .moves, .time,.restart-icon,.game-brand{
   color: #f1c40f;
 }
-
 /*game container*/
 .container {
   display: grid;
@@ -177,11 +177,10 @@ body {
   .container {
     width: 400px;
     height: 400px;
+    margin-top: 7.5rem;
   }
   .game-status {
+    top: 70px;
     width: 400px;
-  }
-  .game-status > * {
-    width: 134px;
   }
 }
