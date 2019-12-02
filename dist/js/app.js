@@ -83,11 +83,15 @@ function cardMatching() {
 
 //handle the unmatched
 function unMatched() {
+  cardOne.children[1].classList.add("shaking");
+  cardTwo.children[1].classList.add("shaking");
   setTimeout(() => {
     cardOne.classList.remove("open");
     cardTwo.classList.remove("open");
+    cardOne.children[1].classList.remove("shaking");
+    cardTwo.children[1].classList.remove("shaking");
     reset();
-  }, 1000);
+  }, 2500);
 }
 
 //reset card matching config
@@ -155,4 +159,3 @@ function startTimer() {
 function numTwoDigit(num) {
   return (num < 10 ? "0" : "") + num;
 }
-
