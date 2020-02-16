@@ -5,57 +5,54 @@
 }
 body {
   font-family: "Times New Roman", Times, serif;
+  background-color: #4b57db;
 }
 .main {
-  width: 100%;
-  height: 100vh;
+  width: 500px;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  /* background: linear-gradient(to right, #1488cc, #2b32b2); */
-  background-color: #303F9F;
-  /* background: linear-gradient(to right, #ff512f, #dd2476);  */
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4b57db;
+  padding: 0 1.5em;
+  margin: auto;
 }
 /*game title*/
 .title {
   width: 100%;
-  min-width: 400px;
-  background-color: #3F51B5;
+  background-color: #fff;
   text-align: center;
-  position: absolute;
-  top: 0px;
-  padding: 10px 5px;
-  color: #FFC107;
-  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+  padding: 15px 5px;
+  color: #4a556b;
 }
 /* game upper status*/
 .game-status {
-  position: absolute;
-  top: 60px;
-  width: 500px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   color: #fff;
-  padding: 0 5px;
+  padding: 10px 0;
 }
-.restart-icon{
+.restart-icon {
   width: 75px;
 }
-.moves, .time,.restart-icon,.game-brand{
-  color: #FFC107;
+.moves,
+.time,
+.restart-icon {
+  color: #fcd450;
 }
 /*game container*/
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
+  width: 100%;
+  height: 480px;
   background-color: transparent;
-  width: 500px;
-  height: 500px;
   perspective: 1000px;
-  margin-top:6.5rem ;
 }
 /*main card*/
 .flip-card {
@@ -66,7 +63,8 @@ body {
   transition: transform 0.8s;
   text-align: center;
   transform: rotateY(180deg);
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 .flip-card-front,
 .flip-card-back {
@@ -84,7 +82,7 @@ body {
   transform: rotateY(180deg);
 }
 .flip-card-back {
-  background-color: #FF9800;
+  background-color: #f1b42f;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -95,15 +93,25 @@ body {
   transform: rotateY(0deg);
 }
 /* shaking effect */
-.shaking{
-  animation: shaking 0.4s linear 1s 2 normal; 
+.shaking {
+  animation: shaking 0.4s linear 1s 2 normal;
 }
 @keyframes shaking {
-  0%   {transform: translateX(-3%)}
-  25%  {transform: translateX(3%)}
-  50%  {transform: translateX(-3%)}
-  75%  {transform: translateX(3%)}
-  100% {transform: translateX(-3%)}
+  0% {
+    transform: translateX(-3%);
+  }
+  25% {
+    transform: translateX(3%);
+  }
+  50% {
+    transform: translateX(-3%);
+  }
+  75% {
+    transform: translateX(3%);
+  }
+  100% {
+    transform: translateX(-3%);
+  }
 }
 /* modal */
 .overlay {
@@ -150,7 +158,7 @@ body {
 }
 
 .popup .close:hover {
-  color: #FF9800;
+  color: #ff9800;
 }
 
 .popup .content-1,
@@ -163,40 +171,47 @@ body {
   margin: 20px 0 10px 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #FF9800;
+  color: #ff9800;
 }
 .content-2 {
   margin-bottom: 20px;
 }
-.content-2 p{
-  display: inline;
+.content-2 p {
+  display: inline; 
 }
 .show {
   visibility: visible !important;
   opacity: 100 !important;
 }
 .play-again {
-  background-color: #3F51B5;
+  background-color: #3f51b5;
   padding: 0.7rem 1rem;
   font-size: 1.1rem;
   display: block;
   margin: 0 auto;
   width: 50%;
   color: #fff;
+  border: none;
   border-radius: 5px;
 }
 /* media query for 768px*/
 @media screen and (max-width: 768px) {
-  .container {
+  .main{
+    padding-top: 2em;
     width: 400px;
+  }
+  .container {
     height: 400px;
-    margin-top: 8.5rem;
+  }
+  .title {
+    width: 100%;
+    padding: 20px 5px;
   }
   .game-status {
-    top: 80px;
-    width: 400px;
+    padding: 1.5em 0 3em 0;
   }
-  .popup{
-    width: 400px;
+  .popup {
+    width: 350px;
+    top: 100px;
   }
 }
